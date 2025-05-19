@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Web Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Skip to main content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Commented out li styling */
+    /* li {
+      list-style: none;
+    } */
+
+    nav {
+      display: inline-block;
+      width: 80%;
+    }
+
+    nav img {
+      width: 10%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 40% 40%;
+      justify-content: center;
+      align-items: start;
+      row-gap: 20px;
+    }
+
+    .grid img {
+      width: 100%;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to Main Content</a>
+
+  <header>
+    <nav>
+      <img src="logo.png" alt="Site Logo">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Parks</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Welcome to Our National Parks</h1>
+    <section class="grid">
+      <div>
+        <h2>Yosemite</h2>
+        <img src="yosemite.jpg" alt="Yosemite Park">
+        <p>Description about Yosemite.</p>
+      </div>
+      <div>
+        <h2>Yellowstone</h2>
+        <img src="yellowstone.jpg" alt="Yellowstone Park">
+        <p>Description about Yellowstone.</p>
+      </div>
+    </section>
+
+    <section class="flex">
+      <div>
+        <h3>Grand Canyon</h3>
+        <img src="grandcanyon.jpg" alt="Grand Canyon">
+      </div>
+      <div>
+        <h3>Zion</h3>
+        <img src="zion.jpg" alt="Zion National Park">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 National Parks</p>
+  </footer>
+</body>
+</html>
